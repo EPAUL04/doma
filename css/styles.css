@@ -1,7 +1,83 @@
-/*default gray*/
-body {
+/*CSS Reset*/
+* {
+    margin: 0;
+    padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url("images/gray_grid.png") fixed center;
+    background-image: url("images/gray_grid.jpg");
+    background-repeat: repeat;
+}
+
+
+/*purple class*/
+.purple header {  /*this is just to visualize, change to correct pallette and etc*/
+    background-color: rgb(84, 13, 105);
+    color: white;
+}
+.purple nav {
+    background-color: rgb(186, 143, 225);
+}
+.purple nav ul li a {
+    color: rgb(84, 13, 105);
+}
+
+/*default gray class*/
+.gray header {
+    background-color: rgb(113, 113, 113);
+    color: white;
+}
+.gray nav {
+    background-color: lightgray;
+}
+.gray nav ul li a {
+    color: rgb(113, 113, 113);
+}
+
+/*pink class*/
+.pink header {
+    background-color: rgb(168, 78, 147);
+    color: white;
+}
+.pink nav {
+    background-color: rgb(199, 141, 186);
+}
+.pink nav ul li a {
+    color: rgb(168, 78, 147);
+}
+
+/*default green*/
+
+.green header {
+    background-color: rgb(61, 128, 87);
+    color: white;
+}
+.green nav {
+    background-color: rgb(124, 218, 164);
+}
+.green nav ul li a {
+    color: rgb(61, 128, 87);
+}
+
+/*default gray*/
+
+.blue header {
+    background-color: rgb(48, 95, 118);
+    color: white;
+}
+.blue nav {
+    background-color: rgb(120, 168, 192);
+}
+.blue nav ul li a {
+    color: rgb(48, 95, 118);
+}
+
+/*universals*/
+header {
+    padding: 2% 0% 2% 2%;
+}
+
+nav {
+    padding: 1% 2%;
+    /* text-align: center; */
 }
 nav ul li {
     list-style-type: none;
@@ -9,5 +85,41 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: rgb(113, 113, 113);
+}
+nav ul li a:hover {
+    color: darkgray;
+}
+
+main {
+    text-align: center;
+    line-height: 200%;
+}
+main ol {
+    text-align: left;
+    margin-left: 5%;
+    line-height: 150%;
+}
+main button {
+    display: inline;
+    width: 90px;
+    height: 55px;
+    padding: 0;
+    margin-top: 2%;
+}
+main button:hover {
+    color: white;
+}
+main button img {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    left: 42%;
+}
+footer p {
+    font-size: xx-small;
+    display: inline;
 }

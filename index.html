@@ -5,7 +5,8 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/styles.css">
     </head>
-    <body>
+    <!-- whatever i set the class to below shows, and if i leave it blank nothing shows. how do i fix? -->
+    <body class=""> 
         <header>
             <h1>Domə</h1>
         </header>
@@ -40,6 +41,40 @@
                 <li>Second, head over to the Flashcards section to get started!</li>
                 <li>Enjoy!</li>
             </ol>
+            <p>As a note, this website will not actually teach you a language, it is just for practice!</p>
+
+            <div id="class-selector">
+                <span style="display: inline;">
+                    <button onclick=setClass(selectPurple())>
+                        <img src="images/purple_jellyfish.gif" alt="a purple jellyfish drawing">
+                    </button>
+                    <button onclick=setClass(selectPink())>
+                        <img src="images/pink_seahorse.gif" alt="a pink seahorse drawing">
+                    </button>
+                    <button onclick=setClass(selectGreen())>
+                        <img src="images/green_turtle.gif" alt="a green turtle drawing">
+                    </button>
+                    <button onclick=setClass(selectBlue())>
+                        <img src="images/blue_fish.gif" alt="a blue fish drawing">
+                    </button>
+                    <button onclick=setClass(selectGray())>
+                        <img src="images/gray_shark.gif" alt="a gray reef shark drawing">
+                    </button>
+                </span>
+            </div>
         </main>
+
+        <footer style="display: inline;">
+            <p>io &#10025; &copy;2025</p>
+            <p>last updated: </p>
+            <p>
+                <script>
+                    var date = document.lastModified;
+                    document.write(date);
+                </script>
+            </p>
+        </footer>
+        
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
