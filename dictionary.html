@@ -5,33 +5,71 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/styles.css">
     </head>
-    <body>
-        <header>
-            <h1>Domə</h1>
-        </header>
+    <body id="change-color">
+        <div id="top-bar">
+            <header>
+                <h1>/domə/</h1>
+            </header>
+    
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html" >Home &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="flashcards.html" >Flashcards &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="dictionary.html" >Dictionary &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="library.html" >Library &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html" >Home &#10025; </a>
-                </li>
-                <li>
-                    <a href="flashcards.html" >Flashcards &#10025; </a>
-                </li>
-                <li>
-                    <a href="dictionary.html" >Dictionary &#10025; </a>
-                </li>
-                <li>
-                    <a href="library.html" >Library &#10025; </a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="smaller-top-bar">
+            <header id="logo">
+                <h1>/domə/</h1>
+            </header>
+            <nav style="display: flex; flex-direction: column;">
+                <button id="hamburger" onclick="dropTheBurg()">
+                    &#8801;
+                </button>
+                
+                <ul id="dropdown" style="display: flex; flex-direction: column; text-align: right; margin-right: 5px;">
+                    <li>
+                        <a href="index.html" >Home</a>
+                    </li>
+                    <li>
+                        <a href="flashcards.html" >Flashcards</a>
+                    </li>
+                    <li>
+                        <a href="dictionary.html" >Dictionary</a>
+                    </li>
+                    <li>
+                        <a href="library.html" >Library</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
         <main>
-            
+            <form id="setUpForm" action="/formdata/formdata.csv" method="post">
+                <label for="setName">Set Name:</label>
+                <input type="text" name="setName" id="setName">
+                <label for="numTerms">Number of Terms:</label>
+                <input type="number" name="numTerms" id="numTerms" style="width:20%">
+                <label for="populateTerms">Click to start editing cards:</label>
+                <input type="submit" name="populateTerms" id="populateTerms" style="padding: 5px;">
+            </form>
         </main>
 
         <footer style="display: inline;">
@@ -45,6 +83,6 @@
             </p>
         </footer>
         
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

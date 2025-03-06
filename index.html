@@ -4,63 +4,136 @@
         <title>Doma</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <!-- whatever i set the class to below shows, and if i leave it blank nothing shows. how do i fix? -->
-    <body class=""> 
-        <header>
-            <h1>Domə</h1>
-        </header>
+    
+    <body id="change-color"> 
+        <div id="top-bar">
+            <header>
+                <h1>/domə/</h1>
+            </header>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html" >Home &#10025; </a>
-                </li>
-                <li>
-                    <a href="flashcards.html" >Flashcards &#10025; </a>
-                </li>
-                <li>
-                    <a href="dictionary.html" >Dictionary &#10025; </a>
-                </li>
-                <li>
-                    <a href="library.html" >Library &#10025; </a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-            </ul>
-        </nav>
-
-        <main>
-            <h3>Welcome to Domə!</h3>
-            <p>Domə is a flashcard website aimed at practicing vocabulary while learning a language! Here's how to use it:</p>
-            <ol>
-                <li>First, fill out your dictionary to store your terms and translations/definitions, or head over to the library 
-                    to find existing sets you would like to practice!
-                </li>
-                <li>Second, head over to the Flashcards section to get started!</li>
-                <li>Enjoy!</li>
-            </ol>
-            <p>As a note, this website will not actually teach you a language, it is just for practice!</p>
-
-            <div id="class-selector">
-                <span style="display: inline;">
+            <div id="class-selector" class="extra">
+                <span style="place-content: center;">
                     <button onclick=setClass(selectPurple())>
-                        <img src="images/purple_jellyfish.gif" alt="a purple jellyfish drawing">
+                        <img src="images_art/purple_jellyfish.png" alt="a purple jellyfish icon">
                     </button>
                     <button onclick=setClass(selectPink())>
-                        <img src="images/pink_seahorse.gif" alt="a pink seahorse drawing">
+                        <img src="images_art/pink_seahorse.png" alt="a pink seahorse icon">
                     </button>
                     <button onclick=setClass(selectGreen())>
-                        <img src="images/green_turtle.gif" alt="a green turtle drawing">
+                        <img src="images_art/green_turtle.png" alt="a green turtle icon">
                     </button>
                     <button onclick=setClass(selectBlue())>
-                        <img src="images/blue_fish.gif" alt="a blue fish drawing">
+                        <img src="images_art/blue_ray.png" alt="a blue fish icon">
                     </button>
                     <button onclick=setClass(selectGray())>
-                        <img src="images/gray_shark.gif" alt="a gray reef shark drawing">
+                        <img src="images_art/gray_shark.png" alt="a gray reef shark icon">
                     </button>
                 </span>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html" >Home &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="flashcards.html" >Flashcards &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="dictionary.html" >Dictionary &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="library.html" >Library &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="smaller-top-bar">
+            <header id="logo">
+                <h1>/domə/</h1>
+            </header>
+            <nav style="display: flex; flex-direction: column;">
+                <button id="hamburger" onclick="dropTheBurg()">
+                    &#8801;
+                </button>
+                
+                <ul id="dropdown" style="display: flex; flex-direction: column; text-align: right; margin-right: 5px;">
+                    <li>
+                        <a href="index.html" >Home</a>
+                    </li>
+                    <li>
+                        <a href="flashcards.html" >Flashcards</a>
+                    </li>
+                    <li>
+                        <a href="dictionary.html" >Dictionary</a>
+                    </li>
+                    <li>
+                        <a href="library.html" >Library</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <div class="mainwrapper">
+            <h1>Welcome to Doma!</h1>  
+            <h3 class="mobile">Welcome to Doma!</h3>
+            <p>Doma is a flashcard website aimed at practicing vocabulary while learning a language! Here's how to use it:</p>
+            <div class="listwrapper">
+                <ol>
+                    <li>First, fill out your dictionary to store your terms and translations/definitions, or head over to the library 
+                        to find existing sets you would like to practice!
+                    </li>
+                    <li>
+                        Second, head over to the Flashcards section to get started! You can tap the card itself to turn it over, 
+                        and hit the 'Next Card' button to go to the next card in the set!
+                    </li>
+                    <li>Enjoy!</li>
+                </ol>
+            </div>
+            <br>
+            <br>
+                <p class="extra">
+                    To select a color scheme, hover over the nav bar to see the dropdown menu with different options. 
+                    Each icon represents a different color palette. When clicked, this theme will be applied to all 
+                    pages within the site. The home page is the only page with this option, so come back to this page 
+                    anytime you want to reset the color scheme.
+                </p>
+                <br>
+                <div id="mobile-class-selector" class="extra">
+                    <p>
+                        Click on the icons below to change the color scheme.
+                    </p>
+                    <button onclick=setClass(selectPurple())>
+                        <img src="images_art/purple_jellyfish.png" alt="a purple jellyfish icon">
+                    </button>
+                    <button onclick=setClass(selectPink())>
+                        <img src="images_art/pink_seahorse.png" alt="a pink seahorse icon">
+                    </button>
+                    <button onclick=setClass(selectGreen())>
+                        <img src="images_art/green_turtle.png" alt="a green turtle icon">
+                    </button>
+                    <button onclick=setClass(selectBlue())>
+                        <img src="images_art/blue_ray.png" alt="a blue fish icon">
+                    </button>
+                    <button onclick=setClass(selectGray())>
+                        <img src="images_art/gray_shark.png" alt="a gray reef shark icon">
+                    </button>
+                </div>
+                <p>
+                    This website was designed for language learning, but works for other topics that you may want to use 
+                    flashcards for. It is good for building and practicing vocab, but will not teach any important 
+                    grammar rules, so it cannot be used to learn new languages or topics.
+                </p>
             </div>
         </main>
 
@@ -75,6 +148,6 @@
             </p>
         </footer>
         
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

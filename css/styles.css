@@ -3,81 +3,198 @@
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url("images/gray_grid.jpg");
-    background-repeat: repeat;
+    /* background-color: rgb(155, 178, 178); */
 }
 
 
 /*purple class*/
-.purple header {  /*this is just to visualize, change to correct pallette and etc*/
-    background-color: rgb(84, 13, 105);
-    color: white;
+.purple {
+    transition: all 2s ease;
 }
-.purple nav {
-    background-color: rgb(186, 143, 225);
+.purple #top-bar {
+    background-image: linear-gradient(to right, rgb(93, 47, 107), rgb(186, 143, 225));
+    
+}
+.purple header {
+    color: white;
 }
 .purple nav ul li a {
-    color: rgb(84, 13, 105);
+    color: rgb(93, 47, 107);
 }
-
-/*default gray class*/
-.gray header {
-    background-color: rgb(113, 113, 113);
+.purple main {
+    background-image: url("../images_mine/purple_grid.jpg");
+    background-repeat: repeat;
+    background-size: 1.7%;
+}
+.purple #sets section, .purple canvas {
+    background-color: rgb(198, 168, 226);
+    background-image: none;
+}
+.purple #sets section h3 {
+    background-color: rgb(94, 61, 104);
     color: white;
-}
-.gray nav {
-    background-color: lightgray;
-}
-.gray nav ul li a {
-    color: rgb(113, 113, 113);
+    background-image: none;
 }
 
 /*pink class*/
+.pink #top-bar {
+    background-image: linear-gradient(to right, rgb(178, 83, 127), rgb(218, 149, 176), rgb(218, 177, 193));
+}
 .pink header {
-    background-color: rgb(168, 78, 147);
     color: white;
 }
-.pink nav {
-    background-color: rgb(199, 141, 186);
-}
 .pink nav ul li a {
-    color: rgb(168, 78, 147);
+    color: rgb(178, 83, 127);
+}
+.pink main {
+    background-image: url("../images_mine/pink_grid.jpg");
+    background-repeat: repeat;
+    background-size: 1.5%;
+}
+.pink #sets section, .pink canvas {
+    background-color: rgb(218, 175, 192);
+    background-image: none;
+}
+.pink #sets section h3 {
+    background-color: rgb(178, 83, 127);
+    color: white;
+    background-image: none;
 }
 
 /*default green*/
-
+.green #top-bar {
+    background-image: linear-gradient(to right, rgb(57, 98, 73), rgb(107, 165, 132), rgb(162, 204, 180));
+}
 .green header {
-    background-color: rgb(61, 128, 87);
     color: white;
 }
-.green nav {
-    background-color: rgb(124, 218, 164);
-}
 .green nav ul li a {
-    color: rgb(61, 128, 87);
+    color: rgb(57, 98, 73);
+}
+.green main {
+    background-image: url("../images_mine/green_grid.jpg");
+    background-repeat: repeat;
+    background-size: 1%;
+}
+.green #sets section, .green canvas {
+    background-color: rgb(162, 204, 180);
+    background-image: none;
+}
+.green #sets section h3 {
+    background-color: rgb(57, 98, 73);
+    color: white;
+    background-image: none;
 }
 
 /*default gray*/
-
-.blue header {
-    background-color: rgb(48, 95, 118);
-    color: white;
+.blue #top-bar {
+    background-image: linear-gradient(to right, rgb(48, 95, 118), rgb(120, 168, 192), rgb(177, 199, 210));
 }
-.blue nav {
-    background-color: rgb(120, 168, 192);
+.blue header {
+    color: white;
 }
 .blue nav ul li a {
     color: rgb(48, 95, 118);
 }
-
-/*universals*/
-header {
-    padding: 2% 0% 2% 2%;
+.blue main {
+    background-image: url("../images_mine/blue_grid.jpg");
+    background-repeat: repeat;
+    background-size: 1.5%;
+}
+.blue #sets section, .blue canvas {
+    background-color: rgb(177, 199, 210);
+    background-image: none;
+}
+.blue #sets section h3 {
+    background-color: rgb(48, 95, 118);
+    color: white;
+    background-image: none;
 }
 
+/*default gray class*/
+.gray #top-bar {
+    background-image: linear-gradient(to right, rgb(113, 113, 113), lightgray);
+}
+.gray header {
+    color: white;
+}
+.gray nav ul li a {
+    color: rgb(113, 113, 113);
+}
+.gray main {
+    background-image: url("../images_mine/gray_grid.jpg");
+    background-repeat: repeat;
+    background-size: 1.5%;
+}
+.gray #sets section, .gray canvas {
+    background-color: lightgray;
+    background-image: none;
+}
+.gray #sets section h3 {
+    background-color: rgb(113, 113, 113);
+    color: white;
+    background-image: none;
+}
+
+/*universals regardless of which color scheme */
+
+
+/* header */
+header {
+    padding: 2% 0% 4% 2%;
+}
+
+
+/* top-bar, which includes header and nav */
+#top-bar {
+    display: grid;
+    grid-template-columns: 10% 20% 70%;
+}
+#top-bar header{
+    text-align: center;
+}
+#top-bar #class-selector {
+    grid-column: 2/3;
+    display: none;
+}
+#top-bar:hover #class-selector {
+    display: grid;
+    background-color: rgb(245, 240, 240);
+    place-content: center;
+    overflow: visible;
+    height: 150%;
+    border-radius: 0% 0% 30% 30%;
+    transition: all 5s ease;
+}
+#top-bar nav {
+    grid-column-start: 3;
+    text-align: right;
+}
+#top-bar button {
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
+    border: 0;
+}
+#top-bar button:hover {
+    color: white;
+}
+#top-bar button img {
+    width: 100%;
+    height: 100%;
+}
+#mobile-class-selector {
+    display: none;
+}
+
+#smaller-top-bar {
+    display: none;
+}
+
+
+/* nav */
 nav {
     padding: 1% 2%;
-    /* text-align: center; */
 }
 nav ul li {
     list-style-type: none;
@@ -85,41 +202,264 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
+    word-spacing: 10px;
+    letter-spacing: 2px;
 }
 nav ul li a:hover {
-    color: darkgray;
+    color: rgb(71, 71, 71);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
 }
 
+
+/* main */
 main {
     text-align: center;
     line-height: 200%;
 }
-main ol {
+.mainwrapper {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 80%;
+    margin: auto;
+}
+.mainwrapper p {
+    width: 80%;
+    margin: auto;
+}
+.listwrapper {
     text-align: left;
-    margin-left: 5%;
     line-height: 150%;
-}
-main button {
-    display: inline;
-    width: 90px;
-    height: 55px;
-    padding: 0;
-    margin-top: 2%;
-}
-main button:hover {
-    color: white;
-}
-main button img {
-    width: 100%;
-    height: 100%;
+    margin-left: 20%;
+    width: 60%;
 }
 
+/* for dictionary page */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+form input {
+    /* width: 20%; */
+    margin: auto;
+}
+
+/* for flashcard page, to style the flashcard itself */
+main canvas {
+    margin: 2.5% auto;
+    width: 75%;
+    height: 75%;
+}
+.front #front{
+    display: block;
+}
+.front #back {
+    display: none;
+}
+.back #front {
+    display: none;
+}
+.back #back {
+    display: block;
+}
+button {
+    padding: 5px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: lightgray;
+}
+
+/* for library page, to style sets */
+main #sets {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 40% 40%;
+    grid-template-areas: 'section section section' 'section section section';
+    gap: 5%;
+    margin: 10px 5px;
+}
+main #sets section {
+    border: 2px solid black;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+main #sets section h3 {
+    background-color: lightgray;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+main #sets section table tr {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
+    
+}
+main #sets section table td {
+    width: 100%;
+    text-align: left;
+    text-align: center;
+}
+
+/* for about page, to style links */
+.listwrapper a {
+    text-decoration: none;
+    color: black;
+}
+.listwrapper a:hover {
+    font-weight: bold;
+    color: navy;
+}
+/* add image to about page */
+#artspace {
+    background-image: url(../images_mine/blue_fish.gif);
+    background-size: 35px;
+    color: white;
+}
+
+
+/* footer */
 footer {
-    position: fixed;
-    bottom: 20px;
+    position: relative;
     left: 42%;
 }
 footer p {
     font-size: xx-small;
     display: inline;
+}
+
+/* responsive design */
+.mobile {
+    display: none;
+}
+
+/* media queries */
+
+/* width at which we want to change the dropdown color picker */
+@media screen and (max-width: 1050px) {
+    body {
+        background-image: none;
+        background-color: blue;
+    }
+
+    #top-bar #class-selector {
+        display: none;
+    }
+    #top-bar:hover #class-selector {
+        display: none;
+    }
+    #mobile-class-selector {
+        display: inline-flex;
+        flex-direction: row;
+    }
+    #mobile-class-selector button {
+        border: 1px solid black;
+        margin: 20px;
+    }
+    #mobile-class-selector button img {
+        width: 30px;
+    }
+    .extra {
+        display: none;
+    }
+    
+}
+
+/* width at which we want to change the nav itself and widen the form in dictionary page and move to two-column layout in library */
+@media screen and (max-width: 900px) {
+    body {
+        background-image: none;
+        background-color: blueviolet;
+    }
+    #top-bar {
+        display: none;
+    }
+    #smaller-top-bar {
+        display: grid;
+        grid-template-areas: 'logo hamburger';
+        justify-content: space-between;
+        margin: 5px;
+    }
+    #smaller-top-bar .dropdown {
+        max-height: 0%;
+        overflow: hidden;
+        /* transition: maxHeight; ********************************************************************************************** */
+    }
+    #small-top-bar .dropdown a {
+        text-align: right;
+    }
+
+    /* for library page, to style sets */
+    main #sets {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 30% 30% 30%;
+        grid-template-areas: 'section section' 'section section' 'section section';
+        gap: 5%;
+        margin: 10px 5px;
+        justify-content: space-around;
+    }
+    main #sets section {
+        border: 2px solid black;
+        overflow: scroll;
+        scrollbar-width: none;
+        margin: 5px;
+    }
+    main #sets section h3 {
+        background-color: lightgray;
+        border-bottom: 2px solid black;
+        width: 100%;
+    }
+    main #sets section table tr {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        gap: 10%;
+        
+    }
+    main #sets section table td {
+        width: 100%;
+        text-align: left;
+        text-align: center;
+    }
+}
+
+/* width at which we want to move to 1 column library layout*/
+@media screen and (max-width: 700px) {
+    body {
+        background-image: none;
+        background-color: orangered;
+    }
+    /* for library page, to style sets */
+main #sets {
+    display: flex;
+    flex-direction: column;
+}
+main #sets section {
+    border: 2px solid black;
+    overflow: scroll;
+    scrollbar-width: none;
+    margin: 10px;
+}
+main #sets section h3 {
+    background-color: lightgray;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+main #sets section table tr {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
+    
+}
+main #sets section table td {
+    width: 100%;
+    text-align: left;
+    text-align: center;
+}
 }

@@ -5,33 +5,336 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/styles.css">
     </head>
-    <body>
-        <header>
-            <h1>Domə</h1>
-        </header>
+    <body id="change-color">
+        <div id="top-bar">
+            <header>
+                <h1>/domə/</h1>
+            </header>
+    
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html" >Home &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="flashcards.html" >Flashcards &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="dictionary.html" >Dictionary &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="library.html" >Library &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html" >Home &#10025; </a>
-                </li>
-                <li>
-                    <a href="flashcards.html" >Flashcards &#10025; </a>
-                </li>
-                <li>
-                    <a href="dictionary.html" >Dictionary &#10025; </a>
-                </li>
-                <li>
-                    <a href="library.html" >Library &#10025; </a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="smaller-top-bar">
+            <header id="logo">
+                <h1>/domə/</h1>
+            </header>
+            <nav style="display: flex; flex-direction: column;">
+                <button id="hamburger" onclick="dropTheBurg()">
+                    &#8801;
+                </button>
+                
+                <ul id="dropdown" style="display: flex; flex-direction: column; text-align: right; margin-right: 5px;">
+                    <li>
+                        <a href="index.html" >Home</a>
+                    </li>
+                    <li>
+                        <a href="flashcards.html" >Flashcards</a>
+                    </li>
+                    <li>
+                        <a href="dictionary.html" >Dictionary</a>
+                    </li>
+                    <li>
+                        <a href="library.html" >Library</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
         <main>
+            <div id="sets" style="scrollbar-width: 0px;">
+                <section id="spanish-nums">
+                    <h3>Set 1 - Numbers 0-10 in Spanish</h3>
+                    <button id="spanish-nums-b" onclick="setvocab('spanish-nums')">Select Set</button>
+                    <table>
+                        <tr>
+                            <th>Spanish Number</th>
+                            <th>English Translation</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>cero</td>
+                            <td>zero</td>
+                        </tr>
+                        <tr>
+                            <td>uno</td>
+                            <td>one</td>
+                        </tr>
+                        <tr>
+                            <td>dos</td>
+                            <td>two</td>
+                        </tr>
+                        <tr>
+                            <td>tres</td>
+                            <td>three</td>
+                        </tr>
+                        <tr>
+                            <td>cuatro</td>
+                            <td>four</td>
+                        </tr>
+                        <tr>
+                            <td>cinco</td>
+                            <td>five</td>
+                        </tr>
+                        <tr>
+                            <td>seis</td>
+                            <td>six</td>
+                        </tr>
+                        <tr>
+                            <td>siete</td>
+                            <td>seven</td>
+                        </tr>
+                        <tr>
+                            <td>ocho</td>
+                            <td>eight</td>
+                        </tr>
+                        <tr>
+                            <td>nueve</td>
+                            <td>nine</td>
+                        </tr>
+                        <tr>
+                            <td>diez</td>
+                            <td>ten</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="css-html-terms">
+                    <h3>Set 2 - CSS and HTML Terms</h3>
+                    <button id="css-html-terms-b" onclick="setvocab('css-html-terms')">Select Set</button>
+                    <table>
+                        <tr>
+                            <th>Term</th>
+                            <th>Definition</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>selector</td>
+                            <td>which items you want to style</td>
+                        </tr>
+                        <tr>
+                            <td>declaration</td>
+                            <td>the property and value you are using to style</td>
+                        </tr>
+                        <tr>
+                            <td>property</td>
+                            <td>the thing you want to change about an element</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>what you change the property to</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>Cascading Style Sheets</td>
+                        </tr>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Hypertext Markup Language</td>
+                        </tr>
+                    </table>
+                </section>
             
+                <section id="irish-colors">
+                    <h3>Set 3 - Colors in Irish Gaelic</h3>
+                    <button id="irish-colors-b" onclick="setvocab('irish-colors')">Select Set</button>
+                    <table>
+                        <tr>
+                            <th>Irish Color</th>
+                            <th>English Translation</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>dearg</td>
+                            <td>red</td>
+                        </tr>
+                        <tr>
+                            <td>oraiste</td>
+                            <td>orange</td>
+                        </tr>
+                        <tr>
+                            <td>buí</td>
+                            <td>yellow</td>
+                        </tr>
+                        <tr>
+                            <td>glas</td>
+                            <td>green</td>
+                        </tr>
+                        <tr>
+                            <td>gorm</td>
+                            <td>blue</td>
+                        </tr>
+                        <tr>
+                            <td>corcra</td>
+                            <td>purple</td>
+                        </tr>
+                        <tr>
+                            <td>bándearg</td>
+                            <td>pink</td>
+                        </tr>
+                        <tr>
+                            <td>bán</td>
+                            <td>white</td>
+                        </tr>
+                        <tr>
+                            <td>dunn</td>
+                            <td>brown</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="spanish-colors">
+                    <h3>Set 4 - Colors in Spanish</h3>
+                    <button id="spanish-colors-b" onclick="setvocab('spanish-colors')">Select Set</button>
+                    <table>
+                        <tr>
+                            <th>Spanish Color</th>
+                            <th>English Translation</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>rojo</td>
+                            <td>red</td>
+                        </tr>
+                        <tr>
+                            <td>naranja</td>
+                            <td>orange</td>
+                        </tr>
+                        <tr>
+                            <td>amarillo</td>
+                            <td>yellow</td>
+                        </tr>
+                        <tr>
+                            <td>verde</td>
+                            <td>green</td>
+                        </tr>
+                        <tr>
+                            <td>azul</td>
+                            <td>blue</td>
+                        </tr>
+                        <tr>
+                            <td>morado/púrpura</td>
+                            <td>purple</td>
+                        </tr>
+                        <tr>
+                            <td>rosa/rosado</td>
+                            <td>pink</td>
+                        </tr>
+                        <tr>
+                            <td>blanco</td>
+                            <td>white</td>
+                        </tr>
+                        <tr>
+                            <td>marrón/café</td>
+                            <td>brown</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="swahili-prefixes">
+                    <h3>Set 5 - Swahili Prefixes</h3>
+                    <button id="swahili-prefixes-b" onclick="setvocab('swahili-prefixes')">Select Set</button>
+                    <table>
+                        <tr>
+                            <th>Swahili Prefix</th>
+                            <th>Part of Speech (English)</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>ni-</td>
+                            <td>subject agreement: 1SG</td>
+                        </tr>
+                        <tr>
+                            <td>tu-</td>
+                            <td>subject agreement: 1PL</td>
+                        </tr>
+                        <tr>
+                            <td>u-</td>
+                            <td>subject agreement: 2SG</td>
+                        </tr>
+                        <tr>
+                            <td>m-</td>
+                            <td>subject agreement: 2PL</td>
+                        </tr>
+                        <tr>
+                            <td>a-</td>
+                            <td>subject agreement: 3SG</td>
+                        </tr>
+                        <tr>
+                            <td>wa-</td>
+                            <td>subject agreement: 3PL</td>
+                        </tr>
+                        <tr>
+                            <td>na-</td>
+                            <td>tense: PRES</td>
+                        </tr>
+                        <tr>
+                            <td>li-</td>
+                            <td>tense: PST</td>
+                        </tr>
+                        <tr>
+                            <td>ku-</td>
+                            <td>tense: INF</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="spanish-conj">
+                    <h3>Set 6 - Spanish Conjugation Rules</h3>
+                    <button id="spanish-conj-b" onclick="setvocab('spanish-conj')">Select Set</button>
+                    <table>
+                        <tr>
+                            <th>Conjugation Rule (Spanish)</th>
+                            <th>Corresponding English Rule</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>verb in present tense</td>
+                            <td>replace infinitive suffix with subject agreement suffix</td>
+                        </tr>
+                        <tr>
+                            <td>(yo) ___-o</td>
+                            <td>subject agreement: 1SG</td>
+                        </tr>
+                        <tr>
+                            <td>(nos) ___-amos/-emos/-imos</td>
+                            <td>subject agreement: 1PL</td>
+                        </tr>
+                        <tr>
+                            <td>(tu) ___-as/-es</td>
+                            <td>subject agreement: 2SG</td>
+                        </tr>
+                        <tr>
+                            <td>(él/la/usted) ___-a/-e</td>
+                            <td>subject agreement: 3SG or 2SG formal</td>
+                        </tr>
+                        <tr>
+                            <td>(ellos/ellas/ustedes) ___-an/-en</td>
+                            <td>subject agreement: 3PL or 2PL</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
         </main>
 
         <footer style="display: inline;">
@@ -45,6 +348,6 @@
             </p>
         </footer>
         
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

@@ -5,33 +5,72 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/styles.css">
     </head>
-    <body>
-        <header>
-            <h1>Domə</h1>
-        </header>
+    
+    <body id="change-color">
+        <div id="top-bar">
+            <header>
+                <h1>/domə/</h1>
+            </header>
+    
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html" >Home &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="flashcards.html" >Flashcards &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="dictionary.html" >Dictionary &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="library.html" >Library &#10025; </a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html" >Home &#10025; </a>
-                </li>
-                <li>
-                    <a href="flashcards.html" >Flashcards &#10025; </a>
-                </li>
-                <li>
-                    <a href="dictionary.html" >Dictionary &#10025; </a>
-                </li>
-                <li>
-                    <a href="library.html" >Library &#10025; </a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="smaller-top-bar">
+            <header id="logo">
+                <h1>/domə/</h1>
+            </header>
+            <nav style="display: flex; flex-direction: column;">
+                <button id="hamburger" onclick="dropTheBurg()">
+                    &#8801;
+                </button>
+                
+                <ul id="dropdown" style="display: flex; flex-direction: column; text-align: right; margin-right: 5px;">
+                    <li>
+                        <a href="index.html" >Home</a>
+                    </li>
+                    <li>
+                        <a href="flashcards.html" >Flashcards</a>
+                    </li>
+                    <li>
+                        <a href="dictionary.html" >Dictionary</a>
+                    </li>
+                    <li>
+                        <a href="library.html" >Library</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
         <main>
-            
+            <button id="cardsbutton" onclick=startup()>Start</button>
+            <div id="cards" onclick="toggle_card()" class="front">
+                <canvas id="front">
+                </canvas>
+                <canvas id="back">
+                </canvas>
+                <button id="turn-over" onclick=display_next()>Next Card</button>
+            </div>
         </main>
 
         <footer style="display: inline;">
@@ -45,6 +84,8 @@
             </p>
         </footer>
         
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="js/script.js">
+            
+        </script>
     </body>
 </html>
