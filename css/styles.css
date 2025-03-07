@@ -15,6 +15,12 @@
     background-image: linear-gradient(to right, rgb(93, 47, 107), rgb(186, 143, 225));
     
 }
+.purple #smaller-top-bar {
+    background-color: rgb(186, 143, 225);
+}
+.purple #smaller-top-bar h1 {
+    color: rgb(93, 47, 107);
+}
 .purple header {
     color: white;
 }
@@ -39,6 +45,12 @@
 /*pink class*/
 .pink #top-bar {
     background-image: linear-gradient(to right, rgb(178, 83, 127), rgb(218, 149, 176), rgb(218, 177, 193));
+}
+.pink #smaller-top-bar {
+    background-color: rgb(218, 149, 176);
+}
+.pink #smaller-top-bar h1 {
+    color: rgb(178, 83, 127);
 }
 .pink header {
     color: white;
@@ -65,6 +77,12 @@
 .green #top-bar {
     background-image: linear-gradient(to right, rgb(57, 98, 73), rgb(107, 165, 132), rgb(162, 204, 180));
 }
+.green #smaller-top-bar {
+    background-color: rgb(107, 165, 132);
+}
+.green #smaller-top-bar h1 {
+    color: rgb(57, 98, 73);
+}
 .green header {
     color: white;
 }
@@ -90,6 +108,12 @@
 .blue #top-bar {
     background-image: linear-gradient(to right, rgb(48, 95, 118), rgb(120, 168, 192), rgb(177, 199, 210));
 }
+.blue #smaller-top-bar {
+    background-color: rgb(177, 199, 210);
+}
+.blue #smaller-top-bar h1 {
+    color: rgb(48, 95, 118);
+}
 .blue header {
     color: white;
 }
@@ -114,6 +138,12 @@
 /*default gray class*/
 .gray #top-bar {
     background-image: linear-gradient(to right, rgb(113, 113, 113), lightgray);
+}
+.gray #smaller-top-bar {
+    background-color: lightgray;
+}
+.gray #smaller-top-bar h1 {
+    color: rgb(113, 113, 113);
 }
 .gray header {
     color: white;
@@ -341,11 +371,6 @@ footer p {
 
 /* width at which we want to change the dropdown color picker */
 @media screen and (max-width: 1050px) {
-    body {
-        background-image: none;
-        background-color: blue;
-    }
-
     #top-bar #class-selector {
         display: none;
     }
@@ -353,8 +378,7 @@ footer p {
         display: none;
     }
     #mobile-class-selector {
-        display: inline-flex;
-        flex-direction: row;
+        display: inline;
     }
     #mobile-class-selector button {
         border: 1px solid black;
@@ -371,10 +395,6 @@ footer p {
 
 /* width at which we want to change the nav itself and widen the form in dictionary page and move to two-column layout in library */
 @media screen and (max-width: 900px) {
-    body {
-        background-image: none;
-        background-color: blueviolet;
-    }
     #top-bar {
         display: none;
     }
@@ -387,7 +407,6 @@ footer p {
     #smaller-top-bar .dropdown {
         max-height: 0%;
         overflow: hidden;
-        /* transition: maxHeight; ********************************************************************************************** */
     }
     #small-top-bar .dropdown a {
         text-align: right;
@@ -426,40 +445,64 @@ footer p {
         text-align: left;
         text-align: center;
     }
+
+    main form {
+        width: 40%;
+    }
+
+    #mobile-class-selector {
+        display: block;
+    }
+    #mobile-class-selector button {
+        display: inline;
+        padding: 3%;
+    }
 }
+
 
 /* width at which we want to move to 1 column library layout*/
 @media screen and (max-width: 700px) {
-    body {
-        background-image: none;
-        background-color: orangered;
-    }
     /* for library page, to style sets */
-main #sets {
-    display: flex;
-    flex-direction: column;
-}
-main #sets section {
-    border: 2px solid black;
-    overflow: scroll;
-    scrollbar-width: none;
-    margin: 10px;
-}
-main #sets section h3 {
-    background-color: lightgray;
-    border-bottom: 2px solid black;
-    width: 100%;
-}
-main #sets section table tr {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 45% 45%;
-    gap: 10%;
-    
-}
-main #sets section table td {
-    width: 100%;
-    text-align: left;
-    text-align: center;
-}
+    main #sets {
+        display: flex;
+        flex-direction: column;
+    }
+    main #sets section {
+        border: 2px solid black;
+        overflow: scroll;
+        scrollbar-width: none;
+        margin: 10px;
+    }
+    main #sets section h3 {
+        background-color: lightgray;
+        border-bottom: 2px solid black;
+        width: 100%;
+    }
+    main #sets section table tr {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        gap: 10%;
+        
+    }
+    main #sets section table td {
+        width: 100%;
+        text-align: left;
+        text-align: center;
+    }
+
+    main form {
+        width: 60%;
+    }
+
+    main button {
+        padding: 10px 20px;
+    }
+
+    #mobile-class-selector {
+        display: block;
+    }
+    #mobile-class-selector button {
+        margin: 5px;
+    }
 }
