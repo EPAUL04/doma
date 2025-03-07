@@ -107,7 +107,37 @@ function setvocab(setname) {
             break;
 
         case('css-html-terms'):
-            vocablist.push("term1", "def1");
+            vocablist.push("selector", "which items you want to style", "declaration", "the property and value you are using to style", 
+                "property", "the thing you want to change about an element", "value", "what you change the property to", "CSS", 
+                "Cascading Style Sheets", "HTML", "HyperText Markup Language"
+            );
+            break;
+            
+        case('irish-colors'):
+            vocablist.push("dearg", "red", "oraiste", "orange", "buí", "yellow", "glas", "green", "gorm", "blue", "corcra", "purple", 
+                "bándearg", "pink", "bán", "white", "dunn", "brown"
+            );
+            break;
+            
+        case('spanish-colors'):
+            vocablist.push("rojo", "red", "naranja", "orange", "amarillo", "yellow", "verde", "green", "azul", "blue", "morado/púrpura", 
+                "purple", "rosado/rosa", "blanco", "white", "marrón/café", "brown"
+            );
+            break;
+
+        case('swahili-prefixes'):
+            vocablist.push("ni-", "subject agreement: 1SG", "tu-", "subject agreement: 1PL", "u-", "subject agreement: 2SG", "m-", 
+                "subject agreement: 2SG", "a-", "subject agreement: 3SG", "wa-", "subject agreement: 3PL", "ku-", "tense: INF", "na-", 
+                "tense: PRES", "li-", "tense: PST"
+            );
+            break;
+
+        case('spanish-conj'):
+            vocablist.push("verb in present tense", "replace infinitive suffix with subject agreement suffix", "(yo) ___-o", 
+                "subject agreement: 1SG", "(nos) ___-amos/-emos/-imos", "subject agreement: 1PL", "(tu) ___-as/-es", 
+                "subject agreement: 2SG", "(él/la/usted) ___-a/-e", "subject agreement: 3SG or 2SG formal", 
+                "(ellos/ellas/ustedes) ___-an/-en", "subject agreement: 3PL or 2PL"
+            );
             break;
     }
     localStorage.setItem('vocab', vocablist);
