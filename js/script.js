@@ -69,17 +69,17 @@ setUpForm.addEventListener("submit", (e) => {
 });
 
 function populateCards(numTerms){
-    vocab = [];
+    vocablist = [];
     for (let index = 0; index < numTerms; index++) {
         term = prompt("Enter a term");
         def = prompt("Enter its definition/translation");
-        // termDefDict.push({
-        //     key:   term,
-        //     value: def
-        // });
-        vocab.push(term, def);
+        vocablist.push(term, def);
     }
-    localStorage.setItem('vocab', vocab);
+    // adds any vocab already in the list so they don't get overwritten
+    if (localStorage.getItem('vocab') != null){
+        vocablist.push(localStorage.getItem('vocab'));
+    }
+    localStorage.setItem('vocab', vocablist);
 }
 
 // flashcards page
@@ -121,7 +121,7 @@ function setvocab(setname) {
             
         case('spanish-colors'):
             vocablist.push("rojo", "red", "naranja", "orange", "amarillo", "yellow", "verde", "green", "azul", "blue", "morado/púrpura", 
-                "purple", "rosado/rosa", "blanco", "white", "marrón/café", "brown"
+                "purple", "rosado/rosa", "pink", "blanco", "white", "marrón/café", "brown"
             );
             break;
 
@@ -139,6 +139,9 @@ function setvocab(setname) {
                 "(ellos/ellas/ustedes) ___-an/-en", "subject agreement: 3PL or 2PL"
             );
             break;
+    }
+    if (localStorage.getItem('vocab') != null){
+        vocablist.push(localStorage.getItem('vocab'));
     }
     localStorage.setItem('vocab', vocablist);
     document.getElementById(setname + "-b").style.backgroundColor = "gray";

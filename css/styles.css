@@ -185,16 +185,26 @@ header {
 }
 #top-bar #class-selector {
     grid-column: 2/3;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    /* display: none; */
 }
 #top-bar:hover #class-selector {
     display: grid;
     background-color: rgb(245, 240, 240);
     place-content: center;
     overflow: visible;
+    max-height: 200%;
     height: 150%;
     border-radius: 0% 0% 30% 30%;
-    transition: all 5s ease;
+    transition: all 2s ease;
+}
+#top-bar:hover #class-selector img, #top-bar:hover #class-selector button {
+    max-height: 0;
+}
+#top-bar #class-selector:hover img, #top-bar #class-selector:hover button {
+    max-height: 200%;
+    transition: all 2s ease;
 }
 #top-bar nav {
     grid-column-start: 3;
@@ -239,7 +249,7 @@ nav ul li a:hover {
     color: rgb(71, 71, 71);
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.5s ease;
+    transition: all 0.5s 0s ease;
 }
 
 
@@ -356,10 +366,22 @@ main #sets section table td {
 footer {
     position: relative;
     left: 42%;
+    text-align: center;
+    /* bottom: 20px;
+    height: 40px; */
+    margin-top: 20px;
+    /* padding-top: 20px; */
 }
 footer p {
     font-size: xx-small;
     display: inline;
+}
+footer p a {
+    text-decoration: none;
+    color: black;
+}
+footer p a:hover {
+    color: gray;
 }
 
 /* responsive design */
@@ -394,7 +416,7 @@ footer p {
 }
 
 /* width at which we want to change the nav itself and widen the form in dictionary page and move to two-column layout in library */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     #top-bar {
         display: none;
     }
@@ -457,11 +479,19 @@ footer p {
         display: inline;
         padding: 3%;
     }
+
+    footer {
+        left: 35%;
+    }
 }
 
 
 /* width at which we want to move to 1 column library layout*/
 @media screen and (max-width: 700px) {
+    .mainwrapper {
+        width: 100%;
+    }
+
     /* for library page, to style sets */
     main #sets {
         display: flex;
@@ -504,5 +534,9 @@ footer p {
     }
     #mobile-class-selector button {
         margin: 5px;
+    }
+
+    footer {
+        left: 30%;
     }
 }
